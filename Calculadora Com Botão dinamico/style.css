@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+
+body { /*font dos numeros */
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(159, 150, 150);
+}
+
+body {
+    background-image: url(matematica.png); /*imagem de fundo*/
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.calculator {  /*corpo da calculadora*/
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgb(63, 48, 48); /* efeito de sombra*/
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active { /*cor do botão ao apertar */ 
+    color: rgb(17, 14, 14);
+}
+
+.theme-toggler.active::before {
+    background-color: rgb(253, 253, 253); /*cor do botão ao apertar*/
+}
+
+.theme-toggler::before { 
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: rgb(40, 37, 37);
+    z-index: -1;
+}
+
+#display {
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+  }
+
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease; /*efeito transição*/
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button#equal {  /*botão de apagar */
+    height: 130px; 
+}
+
+/* tema branco */
+
+.calculator {
+    background-color: #fff;
+}
+
+.calculator #display {
+    color: #0a1e23;
+}
+
+.calculator button#clear { /* cor do bot apagar */
+    background-color: #ffd5d8;
+    color: #fc4552;
+}
+
+.calculator button.btn-number { /* cores dos bot numericos */
+    background-color: #c3eaff;
+    color: #000000;
+}
+
+.calculator button.btn-operator { /*bot operadores */
+    background-color: #ffd0fb;
+    color: #702e6e;
+  }
+  
+  .calculator button.btn-equal { /* bot de resulto */ 
+    background-color: #adf9e7;
+    color: #000;
+  }
+
+  /* tema escuro */
+
+  .calculator.dark {
+    background-color: #2b3338;
+  }
+
+  .calculator.dark #display {
+    color: #f8fafb;
+  }
+
+  .calculator.dark button#clear {
+    background-color: #2d191e;
+    color: #bd3740;
+  }
+
+  .calculator.dark button.btn-number {
+    background-color: #285e94;
+    color: #f8fafb;
+  }
+
+  .calculator.dark button.btn-operator {
+    background-color: #671550;
+    color: #ffffff;
+  }
+  
+  .calculator.dark button.btn-equal {
+    background-color: #207996;
+    color: #ffffff;
+  }
+
+  /*Feito por VitoriaShapiro*/
